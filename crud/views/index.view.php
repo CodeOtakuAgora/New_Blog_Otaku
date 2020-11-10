@@ -1,0 +1,1 @@
+<a style="display: flex; justify-content: center; width: 250px; margin: 100px auto 0; font-family: 'Lato', sans-serif;"     class="btn btn-primary" href="../index.php">    Retour à l'accueil</a>

@@ -1,0 +1,236 @@
+/************GENERAL************/
+
+* {
+    box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, sub, sup, tt, var,
+b, u, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    list-style: none;
+    text-decoration: none;
+}
+
+
+/************NAVBAR************/
+
+.navbar-brand img {
+    width: 150px;
+    height: auto;
+}
+
+.navbar-collapse {
+    margin-top: 10px;
+}
+
+.nav-link {
+    margin: 5px;
+    font-family: 'Lato', sans-serif;
+    font-size: 22px;
+}
+
+#toggle {
+    display: none;
+}
+
+
+@media only screen and (max-width: 925px) {
+    #toggle:checked + .menunav .txtnav {
+        display: block;
+    }
+
+}
+
+
+/************MAIN************/
+
+h1, h2, h3 {
+	text-align: center;
+    font-family: 'Lato', sans-serif;
+}
+
+h1 {
+    display: flex;
+    align-items: center; 
+    font-size: 40px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+h2, h3 {
+    text-align: center;
+    height: 30px;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: #93C5FF;
+}
+
+h2 {
+    cursor: pointer;
+    font-size: 35px;
+    height: 40px;
+    margin: 50px 0;
+    background-color: #93C5FF;
+}
+
+h3 {
+    margin: 50px 0;
+}
+
+.elements-list {
+    display: none;
+    padding-bottom: 50px;
+}
+
+.tablevideo {
+    margin: 50px 0;
+	display: flex;
+	justify-content: center;
+}
+
+figure {
+	width: 300px;
+	height: 200px;
+	overflow: hidden;
+}
+
+figure:hover figcaption {
+    transform: translateY(-150px);
+}
+
+figcaption {
+    width: 300px;
+    line-height: 80px;
+    text-align: center;
+    background-color: blue;
+    opacity: 0.75;
+    font-size: 15px;
+    font-weight: bold;
+    transition: all 0.25s ease-out;
+}
+
+figcaption a {
+	text-decoration: none; 
+	color: white;
+}
+
+figcaption a:hover {
+    color: white;
+}
+
+
+/**********FORM LOGIN**********/
+
+.pageconnection {
+    width: 50%;
+    margin: auto;
+    margin-top: 70px;
+}
+
+input[type=text], input[type=password] {
+    background-color: #CBCBCB;
+    color: white;
+    border-style: none;
+    padding: 10px;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    color: black;
+    background-color: #E1E1E1;
+    /* Firefox */
+    -moz-transition: all 0.5s ease-in;
+    /* WebKit */
+    -webkit-transition: all 0.5s ease-in;
+    /* Opera */
+    -o-transition: all 0.5s ease-in;
+    /* Standard */
+    transition: all 0.5s ease-out;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    outline: none;
+}
+
+input[type=submit] {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 10px;
+}
+
+input[type=submit]:hover {
+    background-color: #0098FF;
+    /* Firefox */
+    -moz-transition: all 0.2s ease-in;
+    /* WebKit */
+    -webkit-transition: all 0.2s ease-in;
+    /* Opera */
+    -o-transition: all 0.2s ease-in;
+    /* Standard */
+    transition: all 0.2s ease-in;
+}
+
+input {
+    font-family: cursive;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+.logform {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.logform input, a {
+    margin: 5px;
+}
+
+.forgotadminn {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+/************FOOTER************/
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.copyright {
+    position: relative;
+    display: block;
+    bottom: 0;
+    color: white;
+    background-color: blue;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.copyright p {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Lato', sans-serif;
+}
