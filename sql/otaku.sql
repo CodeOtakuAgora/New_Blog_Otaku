@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  mar. 10 nov. 2020 à 23:39
+-- Généré le :  mer. 11 nov. 2020 à 23:26
 -- Version du serveur :  10.4.10-MariaDB
 -- Version de PHP :  7.3.12
 
@@ -21,6 +21,18 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `otaku`
 --
+
+-- Expliquation fichier sql de notre site de vente : 
+-- on vérifie si il y a pas déjà une base données otaku si c'est le cas elle sera alors détruite
+-- on créer ensuite la base données otaku
+-- puis on se postionne sur la base donnée otaku afin que les tables 
+-- qui seront crées soient propre à la base de données otaku
+-- et pour finir on crée toutes nos tables en insérant toutes les données nescessaires
+-- au fonctionnement du site 
+
+DROP DATABASE IF EXISTS `otaku`;
+CREATE DATABASE IF NOT EXISTS `otaku`;
+USE `otaku`;
 
 -- --------------------------------------------------------
 
@@ -67,6 +79,30 @@ INSERT INTO `categorie` (`id`, `nom`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `categorie_quiz`
+--
+
+DROP TABLE IF EXISTS `categorie_quiz`;
+CREATE TABLE IF NOT EXISTS `categorie_quiz` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nom` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `categorie_quiz`
+--
+
+INSERT INTO `categorie_quiz` (`id`, `nom`) VALUES
+(1, 'Php'),
+(2, 'Sql'),
+(3, 'Html'),
+(4, 'Css'),
+(5, 'OnePiece');
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `element`
 --
 
@@ -81,15 +117,49 @@ CREATE TABLE IF NOT EXISTS `element` (
   `id_sous_sous_categorie` int(11) NOT NULL,
   `id_type` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `element`
 --
 
 INSERT INTO `element` (`id`, `image`, `titre`, `lien`, `id_categorie`, `id_sous_categorie`, `id_sous_sous_categorie`, `id_type`) VALUES
-(1, 'https://image.animedigitalnetwork.fr/license/mha/tv2/web/affiche_600x856.jpg', 'Saison 3 Episode 3 Vostfr', 'https://animedigitalnetwork.fr/video/my-hero-academia-saison-3/8944-episode-3-kota', 1, 1, 9, 1),
-(2, 'ressources/default.png', 'Visuel Non Disponible', 'https://www.youtube.com/embed/lcMMBZB_Eag', 1, 1, 11, 2);
+(1, 'ressources/my_hero_academia_picture.jpg', 'Saison 3 Episode 3 Vostfr', 'https://animedigitalnetwork.fr/video/my-hero-academia-saison-3/8944-episode-3-kota', 1, 1, 9, 1),
+(2, 'ressources/default.png', 'naruto to boruto: shinobi striker pax east 2018 reactions', 'https://www.youtube.com/embed/lcMMBZB_Eag', 1, 1, 11, 2),
+(3, 'ressources/black_clover_picture.jpg', 'Black Clover 151 vostfr', 'https://www.otakufr.com/Black-Clover-Vostfr/151/', 1, 1, 9, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `quiz`
+--
+
+DROP TABLE IF EXISTS `quiz`;
+CREATE TABLE IF NOT EXISTS `quiz` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `texte` varchar(255) NOT NULL,
+  `role` varchar(255) NOT NULL,
+  `id_categorie` int(11) NOT NULL,
+  `reponse` int(11) NOT NULL,
+  `id_question` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `quiz`
+--
+
+INSERT INTO `quiz` (`id`, `texte`, `role`, `id_categorie`, `reponse`, `id_question`) VALUES
+(1, 'Que signifie PHP ?', 'Question', 1, 0, 1),
+(2, 'Hyper Text Preprocessor', 'Reponse', 1, 0, 1),
+(3, 'Private HyperText Preprocessor', 'Reponse', 1, 0, 1),
+(4, 'HyperText Preprocessor', 'Reponse', 1, 1, 1),
+(5, 'Power HyperText Preprocessor', 'Reponse', 1, 0, 1),
+(6, 'Quelle est la dernière version de Php ?', 'Question', 1, 0, 2),
+(7, '7.2', 'Reponse', 1, 0, 2),
+(8, '7.4', 'Reponse', 1, 1, 2),
+(9, '8.0', 'Reponse', 1, 0, 2),
+(10, '7.3', 'Reponse', 1, 0, 2);
 
 -- --------------------------------------------------------
 
