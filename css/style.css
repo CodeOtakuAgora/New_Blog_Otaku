@@ -93,6 +93,9 @@ h3 {
     margin: 50px 0;
 }
 
+
+/**********ELEMENTS**********/
+
 .elements-list {
     display: none;
     padding-bottom: 50px;
@@ -102,19 +105,25 @@ h3 {
     margin: 50px 0;
 	display: flex;
 	justify-content: center;
+    flex-wrap: wrap;
 }
 
-figure {
+.tablevideo iframe {
+    margin: 50px 30px;
+}
+
+.tablevideo figure {
 	width: 300px;
 	height: 200px;
 	overflow: hidden;
+    margin: 50px 30px;
 }
 
-figure:hover figcaption {
+.tablevideo figure:hover figcaption {
     transform: translateY(-150px);
 }
 
-figcaption {
+.tablevideo figcaption {
     width: 300px;
     line-height: 80px;
     text-align: center;
@@ -122,20 +131,123 @@ figcaption {
     opacity: 0.75;
     font-size: 15px;
     font-weight: bold;
-    transition: all 0.25s ease-out;
+    transition: all 0.25s ease-in-out;
 }
 
-figcaption a {
+.tablevideo figcaption a {
 	text-decoration: none; 
 	color: white;
 }
 
-figcaption a:hover {
+.tablevideo figcaption a:hover {
     color: white;
 }
 
+.arrow {
+    transform: rotate(40deg);
+    position: absolute;
+    bottom: 10px;
+    left: calc(55% - 15px);
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    padding: 10px;
+}
+
+
+/**********Home**********/
+
+.contenu-principal {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    text-align: center;
+    padding: 0 100px;
+    background-color: lightgray;
+}
+
+
+/**********SLIDER**********/
+
+.slider img {
+    margin: 0 auto;
+}
+
+.slick-prev,
+.slick-next {
+    position: absolute;
+    transform: rotate(140deg);
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    padding: 10px;
+    background: none;
+    width: 33px;
+    height: 33px;
+    bottom: 35px;
+    left: 10%;
+    top: calc(50% - 75px);
+    z-index: 9999;
+}
+
+.slick-next {
+    transform: rotate(-50deg);
+    left: inherit;
+    right: 10%;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+    border: solid red;
+    border-width: 0 3px 3px 0;
+}
+
+.slick-prev:focus,
+.slick-next:focus {
+    outline: none;
+}
 
 /**********FORM LOGIN**********/
+
+.form-login {
+    padding-top: 150px;
+}
+
+.form-login form {
+    display: block;
+}
+
+.form-login form div {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.form-login h4 {
+    font-family: 'Lato', sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    margin-left: 80px;
+    margin-bottom: 30px;
+}
+
+.form-login p {
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.form-login input[type="text"] {
+    position: relative;
+    left: 15px;
+}
+
+.form-login input[type="submit"] {
+    display: flex;
+    margin: 50px auto 0;
+}
+
+.form-login input[type=text], input[type=password] {
+    cursor: auto;
+}
 
 .pageconnection {
     width: 50%;
@@ -148,6 +260,7 @@ input[type=text], input[type=password] {
     color: white;
     border-style: none;
     padding: 10px;
+    margin-left: 10px;
 }
 
 input[type=text]:focus, input[type=password]:focus {
@@ -207,6 +320,226 @@ input {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+
+/**********FORM QUIZ**********/
+
+form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+form h4 {
+    margin-left: 15px;
+    font-size: 22px;
+    text-decoration: underline;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+form li {
+    margin: 10px 0;
+    font-size: 18px;
+    font-family: 'Lato', sans-serif;
+}
+
+form input {
+    cursor: pointer;
+}
+
+form input[type="submit"] {
+    margin: 20px 30px 0 0;
+}
+
+.results {
+    display: flex;
+    justify-content: center;
+    font-size: 22px;
+    font-family: 'Lato', sans-serif;
+    margin-top: 20px;
+    color: red;
+    font-weight: bold;
+}
+
+
+/**********CRUD BACK OFFICE**********/
+
+.tblSaveForm {
+    border-top: 2px #999999 solid;
+    background-color: #f8f8f8;
+}
+
+.tableheader {
+    background-color: #fedc4d;
+}
+
+.tablerow {
+    background-color: #A7D6F1;
+    color: white;
+}
+
+.btnSubmit {
+    background-color: #fd9512;
+    padding: 5px;
+    border-color: #FF6600;
+    border-radius: 4px;
+    color: white;
+}
+
+.message {
+    color: #FF0000;
+    text-align: center;
+    width: 100%;
+}
+
+.txtField {
+    padding: 5px;
+    border: #fedc4d 1px solid;
+    border-radius: 4px;
+}
+
+.evenRow {
+    background-color: #E2EDF9;
+    font-size: 12px;
+    color: #101010;
+}
+
+.evenRow:hover {
+    background-color: #ffef46;
+}
+
+.oddRow {
+    background-color: #B3E8FF;
+    font-size: 12px;
+    color: #101010;
+}
+
+.oddRow:hover {
+    background-color: #ffef46;
+}
+
+.tblListForm {
+    border-top: 2px #999999 solid;
+}
+
+.listheader {
+    background-color: #fedc4d;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.link {
+    text-decoration: none;
+    color: #5e8fc7;
+    font-size: 11px;
+}
+
+.content {
+    margin-top: 100px;
+    padding: 0 50px 50px;
+}
+
+.content form {
+    margin-bottom: 50px;
+}
+
+.content .add {
+    text-align: right;
+    padding-bottom: 10px;
+}
+
+.content .add .link {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+}
+
+.content .add .link img {
+    position: relative;
+    top: 6px;
+    right: 2px;
+}
+
+.tblListForm td {
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    vertical-align: middle;
+}
+
+.content a, .content td {
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+}
+
+.content input[type="text"] {
+    cursor: auto;
+}
+
+
+/**********SWEETALERT**********/
+
+.swal2-title {
+    background: none;
+}
+
+.swal2-content {
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+}
+
+
+/**********BANNIERE COOKIES**********/
+
+.cookie-alert {
+    position: fixed;
+    bottom: 24px;
+    right: 20px;
+    border-radius: 10px;
+    background: #2f2f2f;
+    color: #fff;
+    padding: 10px 15px 20px;
+    width: 280px;
+    z-index: 999;
+}
+
+.cookie-alert p {
+    font-size: 16px !important;
+}
+
+.cookie-alert a {
+    display: block;
+    text-align: center;
+    padding: 5px 10px;
+    margin: 8px auto 0 auto;
+    border-radius: 10px;
+    background: transparent;
+    border: 2px solid #46A2D9;
+    color: #46A2D9;
+    transition: all .3s ease;
+}
+
+.cookie-alert a:hover {
+    background: #46A2D9;
+    color: #2f2f2f;
+}
+
+@media only screen and (max-width: 480px) {
+    .cookie-alert {
+        text-align: center;
+        left: 0;
+        right: 0;;
+        margin: 0 auto;
+        max-width: 700px;
+        padding: 10px 30px;
+    }
+}
+
+.source:hover {
+    background: none;
+    color: #FFFFFF;
+    text-decoration: none;
 }
 
 

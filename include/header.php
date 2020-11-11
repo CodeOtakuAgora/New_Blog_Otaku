@@ -6,7 +6,7 @@
 <body <?php if (isset($title) && $title == "Page d'Accueil") { ?> class="maHome" <?php } ?> >
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#" title="Otaku Blog">
+    <a class="navbar-brand" href="#!" title="Otaku Blog">
         <?php if (isset($titleAdminCrud)) { ?>
             <img width="310" height="163" src="../ressources/logo.png" class="d-inline-block align-top" alt="logo">
         <?php } else { ?>
@@ -29,6 +29,9 @@
             </li>
             <li class="nav-item <?php if($title == 'Gallerie') { ?> active <?php } ?>">
                 <a class="nav-link" href="gallerie.php">Gallerie</a>
+            </li>
+            <li class="nav-item <?php if($title == 'Quiz') { ?> active <?php } ?>">
+                <a class="nav-link" href="quiz.php">Quiz</a>
             </li>
 
             <?php if(!isset($_SESSION['login'])) { ?>

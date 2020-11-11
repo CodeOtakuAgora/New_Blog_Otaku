@@ -1,7 +1,10 @@
 <?php
-	foreach ($sous_categories_list as $value) {
-	echo '<h2 id="categorie-elements-'. $value['id'] .'">' . $value['nom'] . '</h2>';
-	$id_sous_categorie = $value['id'];
+	foreach ($sous_categories_list as $value) { ?>
+		<div style="position: relative;">
+			<h2 id="categorie-elements-<?php echo $value['id']; ?>"><?php echo $value['nom']; ?></h2>
+			<a href="#!" title="voir plus" class="arrow" id="arrow-<?php echo $value['id']; ?>"></a>
+		</div>
+	<?php $id_sous_categorie = $value['id'];
 
 	echo '<div class="elements-list" id="elements-'. $value['id'] .'">';
 	
@@ -39,12 +42,12 @@
 } ?>
 
 <script>
-	$('#categorie-elements-5').on('click', function() {
+	$('#categorie-elements-5, #arrow-5').on('click', function() {
 		$('#elements-5').css('display: block')
         $('#elements-5').slideToggle('slow');
     });
 
-    $('#categorie-elements-6').on('click', function() {
+    $('#categorie-elements-6, #arrow-6').on('click', function() {
     	$('#elements-6').css('display: block')
         $('#elements-6').slideToggle('slow');
     });
