@@ -1,6 +1,9 @@
 <div class="content">
 	<div class="slider">
 		<div>
+			<img src="ressources/haikyuu-home.jpg" width="500" height="396" alt="haikyuu illustration">
+		</div>
+		<div>
 			<img src="ressources/presentation/luffy.jpg" width="500" height="396" alt="tableau luffy">
 		</div>
 		<div>
@@ -9,40 +12,6 @@
 		<div>
 			<img src="ressources/presentation/naruto.jpg" width="500" height="396" alt="tableau naruto">
 		</div>
-		<div>
-			<img src="ressources/presentation/natsu.jpg" width="500" height="396" alt="natsu">
-		</div>
-		<div>
-			<img src="ressources/presentation/sabre.jpg" width="500" height="396" alt="sabre">
-		</div>
-		<div>
-			<img src="ressources/presentation/saitama.jpg" width="500" height="396" alt="saitama">
-		</div>
-		<div>
-			<img src="ressources/presentation/saiyans.jpg" width="500" height="396" alt="saiyans">
-		</div>
-		<div>
-			<img src="ressources/presentation/snk.jpg" width="500" height="396" alt="snk">
-		</div>
-		<div>
-			<img src="ressources/presentation/dbm.jpg" width="500" height="396" alt="dbm">
-		</div>
-		<div>
-			<img src="ressources/presentation/eren.jpg" width="500" height="396" alt="eren">
-		</div>
-		<div>
-			<img src="ressources/presentation/goku.jpg" width="500" height="396" alt="goku">
-		</div>
-		<div>
-			<img src="ressources/presentation/light.jpg" width="500" height="396" alt="light">
-		</div>
-	</div><br/><br/><br/>
-
-	<div class="tablevideo">
-		<a href="http://www.volonte-d.com/" target="_blank">
-			<img src="ressources/otaku-home.png" width="300px" height="200px" alt="Picture de Présentation" 
-			title="Platerforme Super Documentée">
-		</a>
 	</div>
 
 	<div class="block-float">
@@ -114,6 +83,16 @@
 			</figcaption>
 
 		</figure>
+
+		<figure>
+			<img src="ressources/otaku-home.png" width="300px" height="200px" alt="Picture de Présentation">
+			<figcaption>
+				<a href="http://www.volonte-d.com/" 
+				target="_blank" style="text-decoration:none; color:white">Platerforme Super Documentée</a>
+			</figcaption>
+		</figure>
+		</a>
+	</div>
 	</div>
 </div>
 

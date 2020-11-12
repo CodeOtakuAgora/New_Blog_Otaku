@@ -202,6 +202,8 @@ h3 {
 
 .slider img {
     margin: 0 auto;
+    width: 100%;
+    object-fit: contain;
 }
 
 .slick-prev,
