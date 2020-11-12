@@ -45,28 +45,33 @@
 		</a>
 	</div>
 
-	<p class="contenu-principal">
-		!!!Attention site otaku!!!<br/><br/>
+	<div class="block-float">
+		<div class="ecart-content">
+			<p>
+				!!!Attention site otaku!!!<br/><br/>
 
-		Donc, dans <strong>l'ACCUEIL</strong> il y a : une petite présentation du site avec des infos sur moi ainsi que des infos sur le Japon pour les intéressés avec un compteur de visites.<br/><br/>
+				Donc, dans <strong>l'ACCUEIL</strong> il y a : une petite présentation du site avec des infos sur moi ainsi que des infos sur le Japon pour les intéressés avec un compteur de visites.<br/><br/>
 
-		Ensuite, dans <strong>les NEWS</strong> il y a : les infos les plus pertinentes de la semaine qui sont regroupés en plusieurs catégories,
-		ainsi que des vidéos constructives et intéressantes qui peuvent intéresser beaucoup d'Otakus,
-		avec en source des Youtubers Mangas Français d'éxeception,
-		et pour finir, dans le à voir aussi il y a : les chaînes de mes potos, et des sites ainsi que des youtubers que j'apprécie beaucoup.
-		<br/><br/>
+				Ensuite, dans <strong>les NEWS</strong> il y a : les infos les plus pertinentes de la semaine qui sont regroupés en plusieurs catégories,
+				ainsi que des vidéos constructives et intéressantes qui peuvent intéresser beaucoup d'Otakus,
+				avec en source des Youtubers Mangas Français d'éxeception,
+				et pour finir, dans le à voir aussi il y a : les chaînes de mes potos, et des sites ainsi que des youtubers que j'apprécie beaucoup.
+				<br/><br/>
 
-		Puis, dans <strong>la GALLERIE</strong> il y a : une présentation des lieux mythiques des otakus,
-		ainsi que des vidéos vlogs en rapport avec les lieux mythiques vus précédemment.
-		<br/><br/>
+				Puis, dans <strong>la GALLERIE</strong> il y a : une présentation des lieux mythiques des otakus,
+				ainsi que des vidéos vlogs en rapport avec les lieux mythiques vus précédemment.
+				<br/><br/>
 
-		Et, dans <strong>les QUIZ</strong> il y a : un catalogue de quiz pour les codeurs mais aussi pour les otakus,
-		qui sont classés dans plusieurs catégories
-		<br/><br/>
+				Et, dans <strong>les QUIZ</strong> il y a : un catalogue de quiz pour les codeurs mais aussi pour les otakus,
+				qui sont classés dans plusieurs catégories
+				<br/><br/>
 
-		PS (Surtout n'hésitez pas à cliquez sur les images qui contiennent des liens pour des infos supplémentaires et 
-		à partager le bon contenu comme moi et Attention pour ceux qui ne lisent pas les scans, ne cliquez pas n'importe où sous peine d'être spoilé, Merci !!!)			
-	</p>
+				PS (Surtout n'hésitez pas à cliquez sur les images qui contiennent des liens pour des infos supplémentaires et 
+				à partager le bon contenu comme moi et Attention pour ceux qui ne lisent pas les scans, ne cliquez pas n'importe où sous peine d'être spoilé, Merci !!!)
+			</p>
+		</div>
+		<div class="ecart-border"></div>
+	</div>
 
 	<h2>Source</h2>
 
@@ -122,8 +127,8 @@
 			nextArrow: '<button type="button" class="slick-next"></button>',
 			slidesToShow: 1,
 			slidesToScroll: 1,
-			autoplay: true,
-			autoplaySpeed: 2000,
+			//autoplay: true,
+			//autoplaySpeed: 2000,
 			cssEase: 'ease-in-out'
 		});
 	});

@@ -3,7 +3,7 @@
 <?php require_once('require.php');
 ?>
 
-<body <?php if (isset($title) && $title == "Page d'Accueil") { ?> class="maHome" <?php } ?> >
+<body <?php if (isset($title) && $title == "Accueil") { ?> class="maHome" <?php } ?> >
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#!" title="Otaku Blog">
@@ -22,30 +22,58 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">            
             <li class="nav-item <?php if($title == 'Accueil') { ?> active <?php } ?>">
-                <a class="nav-link" href="index.php">Accueil</a>
+                <?php if (isset($titleAdminCrud)) { ?>
+                    <a class="nav-link" href="../index.php">Accueil</a>
+                <?php } else { ?>
+                    <a class="nav-link" href="index.php">Accueil</a>
+                <?php } ?>
             </li>
             <li class="nav-item <?php if($title == 'News') { ?> active <?php } ?>">
-                <a class="nav-link" href="news.php">News</a>
+                <?php if (isset($titleAdminCrud)) { ?>
+                    <a class="nav-link" href="../news.php">News</a>
+                <?php } else { ?>
+                    <a class="nav-link" href="news.php">News</a>
+                <?php } ?>
             </li>
             <li class="nav-item <?php if($title == 'Gallerie') { ?> active <?php } ?>">
-                <a class="nav-link" href="gallerie.php">Gallerie</a>
+                <?php if (isset($titleAdminCrud)) { ?>
+                    <a class="nav-link" href="../gallerie.php">Gallerie</a>
+                <?php } else { ?>
+                    <a class="nav-link" href="gallerie.php">Gallerie</a>
+                <?php } ?>
             </li>
             <li class="nav-item <?php if($title == 'Quiz') { ?> active <?php } ?>">
-                <a class="nav-link" href="quiz.php">Quiz</a>
+                <?php if (isset($titleAdminCrud)) { ?>
+                    <a class="nav-link" href="../quiz.php">Quiz</a>
+                <?php } else { ?>
+                    <a class="nav-link" href="quiz.php">Quiz</a>
+                <?php } ?>
             </li>
 
             <?php if(!isset($_SESSION['login'])) { ?>
                 <li class="nav-item <?php if($title == 'Connexion') { ?> active <?php } ?>">
-                    <a class="nav-link" href="login.php">Connexion</a>
+                    <?php if (isset($titleAdminCrud)) { ?>
+                        <a class="nav-link" href="../login.php">Connexion</a>
+                    <?php } else { ?>
+                        <a class="nav-link" href="login.php">Connexion</a>
+                    <?php } ?>
                 </li>
             <?php } ?>
 
             <?php if(isset($_SESSION['login'])) { ?>
                 <li class="nav-item">
-                    <a class="nav-link" href="crud/index.php">Administration</a>
+                    <?php if (isset($titleAdminCrud)) { ?>
+                        <a class="nav-link" href="../crud/index.php">Administration</a>
+                    <?php } else { ?>
+                        <a class="nav-link" href="crud/index.php">Administration</a>
+                    <?php } ?>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="logout.php">Déconnexion</a>
+                    <?php if (isset($titleAdminCrud)) { ?>
+                        <a class="nav-link" href="../logout.php">Déconnexion</a>
+                    <?php } else { ?>
+                        <a class="nav-link" href="logout.php">Déconnexion</a>
+                    <?php } ?>
                 </li>
             <?php } ?>
         </ul>

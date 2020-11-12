@@ -18,7 +18,7 @@
 </style>
 
 <div class="content">
-    <form name="frmUser" method="post" action="">
+    <form name="frmUser" method="POST" action="" enctype="multipart/form-data">
         <div style="width: 100%;">
             <div class="message"><?php if (isset($message)) {
                     echo $message;
@@ -43,8 +43,7 @@
                     <td><label>Image</label></td>
                     <td>
                         <input class="form-control txtField" id="validationServer01" 
-                            type="text" placeholder="Image Url (ressources/image.jpg)" 
-                            name="image" value="">
+                            name="image" type="file" placeholder="Image de l'élément">
                     </td>
                 </tr>
                 <tr>

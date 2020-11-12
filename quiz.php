@@ -8,21 +8,6 @@ require_once('include/require.php');
 
 $categories_list = Bdd::getInstance()->conn->query('SELECT * FROM `categorie_quiz`');
 
-// on check l'input pour le login,password
-// si il y une erreur on affecte le problème dans la variable d'erreur
-// qui s'occupe d'aficher dans une pop-up toutes les erreurs si il y en a
-$countSubmitAnswers = count($_POST) - 1;
-
-if ($countSubmitAnswers == 0) {
-  $erreur = "Veuillez remplir tous les champs";
-}
-
-for ($i = 1; $i <= $countSubmitAnswers; $i++) {
-  if (!isset($_POST['question-'. $i . '-answers']) || trim($_POST['question-'. $i .'-answers']) === '') {
-    $erreur = "Veuillez remplir tous les champs";
-  }
-}
-
 
 if (!isset($erreur) && isset($_POST['bouton'])) {
 	$totalCorrect = 0;

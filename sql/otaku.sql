@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  mer. 11 nov. 2020 à 23:26
+-- Généré le :  jeu. 12 nov. 2020 à 19:27
 -- Version du serveur :  10.4.10-MariaDB
 -- Version de PHP :  7.3.12
 
@@ -143,7 +143,7 @@ CREATE TABLE IF NOT EXISTS `quiz` (
   `reponse` int(11) NOT NULL,
   `id_question` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=23 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `quiz`
@@ -159,7 +159,17 @@ INSERT INTO `quiz` (`id`, `texte`, `role`, `id_categorie`, `reponse`, `id_questi
 (7, '7.2', 'Reponse', 1, 0, 2),
 (8, '7.4', 'Reponse', 1, 1, 2),
 (9, '8.0', 'Reponse', 1, 0, 2),
-(10, '7.3', 'Reponse', 1, 0, 2);
+(10, '7.3', 'Reponse', 1, 0, 2),
+(13, 'Que signifie Html ?', 'Question', 3, 0, 3),
+(14, 'HText Markup Language', 'Reponse', 3, 0, 3),
+(15, 'Hypertext Markup Language', 'Reponse', 3, 1, 3),
+(16, 'Hyper Markup Language', 'Reponse', 3, 0, 3),
+(17, 'Hoho Markup Language', 'Reponse', 3, 0, 3),
+(18, 'Quelle est la dernière version de Html ?', 'Question', 3, 0, 4),
+(19, '4', 'Reponse', 3, 0, 4),
+(20, '5', 'Reponse', 3, 1, 4),
+(21, '6', 'Reponse', 3, 0, 4),
+(22, '1', 'Reponse', 3, 0, 4);
 
 -- --------------------------------------------------------
 

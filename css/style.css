@@ -147,7 +147,7 @@ h3 {
     transform: rotate(40deg);
     position: absolute;
     bottom: 10px;
-    left: calc(55% - 15px);
+    left: 56%;
     border: solid black;
     border-width: 0 3px 3px 0;
     padding: 10px;
@@ -155,6 +155,39 @@ h3 {
 
 
 /**********Home**********/
+
+.block-float {
+    width: 100%;
+    max-width: 650px;
+    bottom: -90px;
+    margin: 50px auto 200px;
+    position: relative;
+}
+
+.ecart-content {
+    background-color: #FFFFFF;
+    box-shadow: rgba(0, 0, 0, 0.25) 5px 5px 30px 0px;
+    padding: 40px 30px 30px;
+    position: relative;
+    z-index: 2;
+}
+
+.ecart-border {
+    width: 100%;
+    height: 100%;
+    border: 3px solid #D82E2E;
+    position: absolute;
+    z-index: 1;
+    top: -50px;
+    left: -40px;
+}
+
+.ecart-content p {
+    color: black;
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+}
 
 .contenu-principal {
     font-family: 'Lato', sans-serif;
@@ -255,7 +288,7 @@ h3 {
     margin-top: 70px;
 }
 
-input[type=text], input[type=password] {
+input[type=text], input[type=password], input[type=file] {
     background-color: #CBCBCB;
     color: white;
     border-style: none;
@@ -263,7 +296,7 @@ input[type=text], input[type=password] {
     margin-left: 10px;
 }
 
-input[type=text]:focus, input[type=password]:focus {
+input[type=text]:focus, input[type=password]:focus, input[type=file]:focus {
     color: black;
     background-color: #E1E1E1;
     /* Firefox */
@@ -274,10 +307,12 @@ input[type=text]:focus, input[type=password]:focus {
     -o-transition: all 0.5s ease-in;
     /* Standard */
     transition: all 0.5s ease-out;
+    outline: none;
 }
 
-input[type=text]:focus, input[type=password]:focus {
-    outline: none;
+input[type=file] {
+    cursor: pointer;
+    padding: 5px;
 }
 
 input[type=submit] {
@@ -549,6 +584,10 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+.maHome footer {
+    position: static;
 }
 
 .copyright {
