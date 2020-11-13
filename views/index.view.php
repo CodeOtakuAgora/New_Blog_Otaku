@@ -1,23 +1,26 @@
 <div class="content">
 	<div class="slider">
 		<div>
-			<img src="ressources/haikyuu-home.jpg" width="500" height="396" alt="haikyuu illustration">
+			<img src="ressources/presentation/haikyuu-home.jpg" width="500" height="396" alt="haikyuu illustration">
 		</div>
 		<div>
-			<img src="ressources/presentation/luffy.jpg" width="500" height="396" alt="tableau luffy">
+			<img src="ressources/presentation/one-piece-home.jpg" width="500" height="396" alt="tableau one piece">
 		</div>
 		<div>
-			<img src="ressources/presentation/luxus.jpg" width="500" height="396" alt="tableau luxus">
+			<img src="ressources/presentation/naruto-home.jpg" width="500" height="396" alt="tableau naruto">
 		</div>
-		<div>
-			<img src="ressources/presentation/naruto.jpg" width="500" height="396" alt="tableau naruto">
-		</div>
+	</div>
+
+	<div class="tablevideo table-mobile">
+		<img src="ressources/presentation/haikyuu-home.jpg" width="500" height="396" alt="haikyuu illustration">
+		<img src="ressources/presentation/one-piece-home.jpg" width="500" height="396" alt="tableau one piece">
+		<img src="ressources/presentation/naruto-home.jpg" width="500" height="396" alt="tableau naruto">
 	</div>
 
 	<div class="block-float">
 		<div class="ecart-content">
 			<p>
-				!!!Attention site otaku!!!<br/><br/>
+				!!! Attention site otaku !!!<br/><br/>
 
 				Donc, dans <strong>l'ACCUEIL</strong> il y a : une petite présentation du site avec des infos sur moi ainsi que des infos sur le Japon pour les intéressés avec un compteur de visites.<br/><br/>
 
@@ -42,7 +45,7 @@
 		<div class="ecart-border"></div>
 	</div>
 
-	<h2>Source</h2>
+	<h2>Sources</h2>
 
 	<div class="tablevideo">
 		<figure>
@@ -106,8 +109,8 @@
 			nextArrow: '<button type="button" class="slick-next"></button>',
 			slidesToShow: 1,
 			slidesToScroll: 1,
-			//autoplay: true,
-			//autoplaySpeed: 2000,
+			autoplay: true,
+			autoplaySpeed: 3000,
 			cssEase: 'ease-in-out'
 		});
 	});
