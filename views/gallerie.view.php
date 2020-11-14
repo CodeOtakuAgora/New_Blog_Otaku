@@ -16,12 +16,15 @@
 			echo '<h3>'. $res['nom'] . '</h3>';
 			$id_sous_sous_categorie = $res['id'];
 
-			$element_list = Bdd::getInstance()->conn->query('SELECT * FROM `element` 
-				WHERE id_categorie = "' . $id_categorie . '" AND id_sous_categorie = "' . $id_sous_categorie . 
-				'" AND id_sous_sous_categorie = "' . $id_sous_sous_categorie . '"');
-			foreach ($element_list as $result) {
+			$element_list = Bdd::getInstance()->conn->query(sprintf('
+				SELECT * FROM `element` WHERE id_categorie = %d 
+				AND id_sous_categorie = %d AND id_sous_sous_categorie = %d 
+				ORDER BY id', 
+				$id_categorie, $id_sous_categorie, $id_sous_sous_categorie)); ?>
+
+			<div class="table-video">
+			<?php foreach ($element_list as $result) {
 				if ($result['id_type'] == 1) { ?>
-					<div class="table-video">
 						<figure>
 				            <img src="<?php echo $result['image'] ?>" width="300px" height="200px" alt="dernier épisode">
 
@@ -31,15 +34,16 @@
 				                </a>
 				            </figcaption>
 				        </figure>
-					</div>
+					
 				<?php }
 				elseif ($result['id_type'] == 2) { ?>
 					<div class="table-video">
 					    <iframe width="300px" height="200px" src="<?php echo $result['lien'] ?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
 					</div>
 				<?php }
-			}
-		}
+			} ?>
+		</div>
+		<?php }
 	echo '</div>';
 } ?>
 
