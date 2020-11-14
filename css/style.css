@@ -27,7 +27,6 @@ time, mark, audio, video {
     text-decoration: none;
 }
 
-
 /************NAVBAR************/
 
 .navbar-brand img {
@@ -616,6 +615,58 @@ footer {
     font-size: 20px;
     font-weight: bold;
     font-family: 'Lato', sans-serif;
+}
+
+
+/************MODIFS************/
+
+body {
+    background-color: #00b9fb;
+}
+.ecart-border {
+    border: 3px solid darkblue;
+}
+
+h2, h3 {
+    background-color: darkblue;
+    color: white;
+}
+
+h4, form p {
+    color: white
+}
+
+form input[type="text"], form input[type="password"] {
+    background-color: white;
+}
+
+form input[type="submit"] {
+    margin: 50px auto 0 !important;
+    padding: 10px 50px;
+}
+
+.slick-prev, .slick-next {
+    border: solid white;
+    border-width: 0 3px 3px 0;
+}
+
+.slick-prev:hover, .slick-next:hover {
+    border: solid darkblue;
+    border-width: 0 3px 3px 0;
+}
+
+.arrow {
+    border: solid white;
+    border-width: 0 3px 3px 0;
+}
+
+.form-login {
+    padding-top: 100px;
+}
+
+.connexion {
+    background-color: darkblue;
+    padding: 50px 0;
 }
 
 

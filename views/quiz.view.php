@@ -1,8 +1,10 @@
 <?php
 	foreach ($categories_list as $value) { ?>
 		<div style="position: relative;">
-			<h2 id="categorie-elements-<?php echo $value['id']; ?>"><?php echo $value['nom']; ?></h2>
-			<a href="#!" title="voir plus" class="arrow" id="arrow-<?php echo $value['id']; ?>"></a>
+			<h2 onclick="showHideContent(<?php echo $value['id']; ?>)" 
+				id="categorie-elements-<?php echo $value['id']; ?>"><?php echo $value['nom']; ?></h2>
+			<a onclick="showHideContent(<?php echo $value['id']; ?>)" 
+				href="#!" title="voir plus" class="arrow" id="arrow-<?php echo $value['id']; ?>"></a>
 		</div>
 	<?php $id_categorie = $value['id'];
 
@@ -40,30 +42,10 @@
 } ?>
 
 <script>
-	$('#categorie-elements-1, #arrow-1').on('click', function() {
-		$('#elements-1').css('display: block');
-        $('#elements-1').slideToggle('slow');
-    });
-
-    $('#categorie-elements-2, #arrow-2').on('click', function() {
-    	$('#elements-2').css('display: block');
-        $('#elements-2').slideToggle('slow');
-    });
-
-    $('#categorie-elements-3, #arrow-3').on('click', function() {
-    	$('#elements-3').css('display: block');
-        $('#elements-3').slideToggle('slow');
-    });
-
-    $('#categorie-elements-4, #arrow-4').on('click', function() {
-    	$('#elements-4').css('display: block');
-        $('#elements-4').slideToggle('slow');
-    });
-
-    $('#categorie-elements-5, #arrow-5').on('click', function() {
-    	$('#elements-5').css('display: block');
-        $('#elements-5').slideToggle('slow');
-    });
+	function showHideContent(id) {
+		$('#elements-'+ id + '').css('display: block')
+        $('#elements-'+ id + '').slideToggle('slow');
+	}
 </script>
 
 <!-- on inclut le footer du site tout à la fin car le but est de le charger en dernier-->
