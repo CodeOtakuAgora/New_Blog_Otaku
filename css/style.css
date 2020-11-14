@@ -100,31 +100,31 @@ h3 {
     padding-bottom: 50px;
 }
 
-.tablevideo {
+.table-video {
     margin: 50px 0;
 	display: flex;
 	justify-content: center;
     flex-wrap: wrap;
 }
 
-.tablevideo iframe {
+.table-video iframe {
     margin: 50px 30px;
 }
 
-.tablevideo figure {
+.table-video figure {
 	width: 300px;
 	height: 200px;
 	overflow: hidden;
     margin: 50px 30px;
 }
 
-.tablevideo figure:hover figcaption {
+.table-video figure:hover figcaption {
     transform: translateY(-150px);
 }
 
-.tablevideo figcaption {
+.table-video figcaption {
     width: 300px;
-    line-height: 80px;
+    line-height: 50px;
     text-align: center;
     background-color: blue;
     opacity: 0.75;
@@ -133,13 +133,30 @@ h3 {
     transition: all 0.25s ease-in-out;
 }
 
-.tablevideo figcaption a {
+.table-video figcaption a {
 	text-decoration: none; 
 	color: white;
 }
 
-.tablevideo figcaption a:hover {
+.table-video figcaption a:hover {
     color: white;
+}
+
+.table-video img {
+    width: 100%;
+}
+
+.little-table-video {
+    width: 250px !important;
+    margin: 50px !important;
+}
+
+.little-table-video figcaption {
+    width: 250px !important;
+}
+
+.little-table-video:hover figcaption {
+    transform: translateY(-125px) !important;
 }
 
 .arrow {

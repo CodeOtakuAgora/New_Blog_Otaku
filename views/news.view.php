@@ -17,13 +17,19 @@
 			<h3><?php echo $res['nom']; ?></h3>
 			<?php $id_sous_sous_categorie = $res['id'];
 
-			$element_list = Bdd::getInstance()->conn->query('SELECT * FROM `element` 
-				WHERE id_categorie = "' . $id_categorie . '" AND id_sous_categorie = "' . $id_sous_categorie . 
-				'" AND id_sous_sous_categorie = "' . $id_sous_sous_categorie . '"'); ?>
-			<div class="tablevideo">
+			
+
+			$element_list = Bdd::getInstance()->conn->query(sprintf('
+				SELECT * FROM `element` WHERE id_categorie = %d 
+				AND id_sous_categorie = %d AND id_sous_sous_categorie = %d 
+				ORDER BY id DESC', 
+				$id_categorie, $id_sous_categorie, $id_sous_sous_categorie)); ?>
+
+			<div class="table-video">
 				<?php foreach ($element_list as $result) {
 					if ($result['id_type'] == 1) { ?>
-						<figure>
+						<figure <?php if($res['nom'] == 'Mangas') { ?> 
+							class="little-table-video" <?php } ?> >
 				            <img src="<?php echo $result['image'] ?>" width="300px" height="200px" 
 				            	alt="dernier épisode">
 				            <figcaption>

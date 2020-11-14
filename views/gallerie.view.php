@@ -21,7 +21,7 @@
 				'" AND id_sous_sous_categorie = "' . $id_sous_sous_categorie . '"');
 			foreach ($element_list as $result) {
 				if ($result['id_type'] == 1) { ?>
-					<div class="tablevideo">
+					<div class="table-video">
 						<figure>
 				            <img src="<?php echo $result['image'] ?>" width="300px" height="200px" alt="dernier épisode">
 
@@ -34,7 +34,7 @@
 					</div>
 				<?php }
 				elseif ($result['id_type'] == 2) { ?>
-					<div class="tablevideo">
+					<div class="table-video">
 					    <iframe width="300px" height="200px" src="<?php echo $result['lien'] ?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
 					</div>
 				<?php }
