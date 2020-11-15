@@ -7,6 +7,11 @@ $title = "Ajout Administration";
 // on inclut notre package (librairie) qui s'occupe de charger toutes les pages dont on a besoin
 require_once("../include/require.php");
 
+$categorieList = Element::getAllCategorie();
+$sousCategorieList = Element::getAllSousCategorie();
+$sousSousCategorieList = Element::getAllSousSousCategorie();
+$typeList = Element::getAlltype();
+
 // on vérifie si le formulaire à été validé
 if (count($_POST) > 0) {	
 	// fonction qui retourne le fichier en sécurisant les données envoyées
@@ -48,11 +53,9 @@ if (count($_POST) > 0) {
         }
 
         // on vérifie si le fichier à bien été déplacé dans le chemin spécifié
-        if ($isUploadSuccess) {
-            if (!move_uploaded_file($_FILES["image"]["tmp_name"], $imagePath)) {
-                $erreur = "Il y a eu une erreur lors de l'upload pour l'image";
-                $isUploadSuccess = false;
-            }
+        if (!move_uploaded_file($_FILES["image"]["tmp_name"], $imagePath)) {
+            $erreur = "Il y a eu une erreur lors de l'upload pour l'image";
+            $isUploadSuccess = false;
         }
     }
 
@@ -62,19 +65,8 @@ if (count($_POST) > 0) {
         // on passe dans des variables les valeurs rentré dand les input
         $image = 'ressources/test/' . basename($image) . '';
 
-
-        $sql = "INSERT INTO `element` (image, titre, lien, id_categorie, id_sous_categorie, id_sous_sous_categorie, id_type) VALUES (?, ?, ?, ?, ?, ?, ?)";
-        $stmt = Bdd::getInstance()->conn->prepare($sql);
-        $stmt->execute([
-            $image,
-            $_POST['titre'],
-            $_POST['lien'],
-            $_POST['id_categorie'],
-            $_POST['id_sous_categorie'],
-            $_POST['id_sous_sous_categorie'],
-            $_POST['id_type']
-        ]);
-        $updatedlist = Bdd::getInstance()->conn->query('SELECT * FROM `element` ORDER BY id DESC');
+        Element::addElement($image, $_POST['titre'], $_POST['lien'], $_POST['id_categorie'], $_POST['id_sous_categorie'],
+            $_POST['id_sous_sous_categorie'], $_POST['id_type']);
 
         // puis on affiche le message de succès
         $message = "Element Ajouté Avec Succès";

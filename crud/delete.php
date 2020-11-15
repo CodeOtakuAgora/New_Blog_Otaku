@@ -8,12 +8,7 @@ require_once("../include/require.php");
 // on apelle la fonction deleteProduit qui appartient à la classe Produit en lui passant en paramettre 
 // l'id du Produit pour filtrer le produit qui à bien été selectionné
 
-if ($_GET["type"] == 'element') {
-	Bdd::getInstance()->conn->query('DELETE FROM element WHERE `id` = "' . $_GET["id"] . '"');	
-}
-elseif ($_GET["type"] == 'quiz') {
-	Bdd::getInstance()->conn->query('DELETE FROM quiz WHERE `id` = "' . $_GET["id"] . '"');	
-}
+Element::deleteElement($_GET["id"]);	
 
 // ensuite on le redirige vers la page principale du crud
 header("Location: index.php");

@@ -70,7 +70,7 @@
                             <?php
                             // on boucle afin de récupérer toutes les annee 
                             // afin de proposer à l'utilisateur de choisir l'annee
-                            foreach (Bdd::getInstance()->conn->query('SELECT * FROM categorie') as $row) {
+                            foreach ($categorieList as $row) {
                                 echo '<option value="' . $row['id'] . '">' . $row['nom'] . '</option>';
                             }
                             ?>
@@ -85,7 +85,7 @@
                             <?php
                             // on boucle afin de récupérer toutes les annee 
                             // afin de proposer à l'utilisateur de choisir l'annee
-                            foreach (Bdd::getInstance()->conn->query('SELECT * FROM sous_categorie') as $row) {
+                            foreach ($sousCategorieList as $row) {
                                 echo '<option value="' . $row['id'] . '">' . $row['nom'] . '</option>';
                             }
                             ?>
@@ -100,7 +100,7 @@
                             <?php
                             // on boucle afin de récupérer toutes les annee 
                             // afin de proposer à l'utilisateur de choisir l'annee
-                            foreach (Bdd::getInstance()->conn->query('SELECT * FROM sous_sous_categorie') as $row) {
+                            foreach ($sousSousCategorieList as $row) {
                                 echo '<option value="' . $row['id'] . '">' . $row['nom'] . '</option>';
                             }
                             ?>
@@ -115,7 +115,7 @@
                             <?php
                             // on boucle afin de récupérer toutes les annee 
                             // afin de proposer à l'utilisateur de choisir l'annee
-                            foreach (Bdd::getInstance()->conn->query('SELECT * FROM type') as $row) {
+                            foreach ($typeList as $row) {
                                 echo '<option value="' . $row['id'] . '">' . $row['nom'] . '</option>';
                             }
                             ?>

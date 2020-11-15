@@ -11,7 +11,7 @@
 		</div>
 	</div>
 
-	<div class="tablevideo table-mobile">
+	<div class="table-video table-mobile">
 		<img src="ressources/presentation/haikyuu-home.jpg" width="500" height="396" alt="haikyuu illustration">
 		<img src="ressources/presentation/one-piece-home.jpg" width="500" height="396" alt="tableau one piece">
 		<img src="ressources/presentation/naruto-home.jpg" width="500" height="396" alt="tableau naruto">
@@ -30,12 +30,8 @@
 				et pour finir, dans le à voir aussi il y a : les chaînes de mes potos, et des sites ainsi que des youtubers que j'apprécie beaucoup.
 				<br/><br/>
 
-				Puis, dans <strong>la GALLERIE</strong> il y a : une présentation des lieux mythiques des otakus,
+				Et, dans <strong>la GALLERIE</strong> il y a : une présentation des lieux mythiques des otakus,
 				ainsi que des vidéos vlogs en rapport avec les lieux mythiques vus précédemment.
-				<br/><br/>
-
-				Et, dans <strong>les QUIZ</strong> il y a : un catalogue de quiz pour les codeurs mais aussi pour les otakus,
-				qui sont classés dans plusieurs catégories
 				<br/><br/>
 
 				PS (Surtout n'hésitez pas à cliquez sur les images qui contiennent des liens pour des infos supplémentaires et 
@@ -47,23 +43,23 @@
 
 	<h2>Sources</h2>
 
-	<div class="tablevideo">
+	<div class="table-video">
 		<figure>
 			<img src="ressources/tokyo-japan-home.jpg" width="300px" height="200px" alt="Présentation Tokyo">
 			<figcaption>
-				<a href="https://planetemaneki.com/" 
-				target="_blank" style="text-decoration:none; color:white">Organisation Voyage Japon</a>
+				<a href="https://planetemaneki.com/"
+				target="_blank" rel="noopener noreferrer" style="text-decoration:none; color:white">Organisation Voyage Japon</a>
 			</figcaption>
 		</figure>
 	</div>
 
-	<div class="tablevideo">
+	<div class="table-video">
 		<figure>
 			<img src="ressources/wiki-home.jpg" 
 			width="300px" height="200px" alt="Infos Supplémentaires">
 			<figcaption>
 				<a href="https://fr.wikipedia.org/wiki/Tokyo" 
-				target="_blank" style="text-decoration:none; color:white">Informations Supplémentaires (1)</a>
+				target="_blank" rel="noopener noreferrer" style="text-decoration:none; color:white">Informations Supplémentaires (1)</a>
 			</figcaption>
 		</figure>
 
@@ -72,17 +68,17 @@
 			width="300px" height="200px" alt="Infos Supplémentaires">
 			<figcaption>
 				<a href="http://desencyclopedie.wikia.com/wiki/Tokyo" 
-				target="_blank" style="text-decoration:none; color:white">Informations Supplémentaires (2)</a>
+				target="_blank" rel="noopener noreferrer" style="text-decoration:none; color:white">Informations Supplémentaires (2)</a>
 			</figcaption>
 		</figure>
 	</div>
 
-	<div class="tablevideo">
+	<div class="table-video">
 		<figure>
 			<img src="ressources/fandom-home.webp" width="300px" height="200px" alt="Dico des Otakus">
 			<figcaption>
 				<a href="http://fr.wikia.com/explore-fr" 
-				target="_blank" style="text-decoration:none; color:white">Dico Des Otakus</a>
+				target="_blank" rel="noopener noreferrer" style="text-decoration:none; color:white">Dico Des Otakus</a>
 			</figcaption>
 
 		</figure>
@@ -91,7 +87,7 @@
 			<img src="ressources/otaku-home.png" width="300px" height="200px" alt="Picture de Présentation">
 			<figcaption>
 				<a href="http://www.volonte-d.com/" 
-				target="_blank" style="text-decoration:none; color:white">Platerforme Super Documentée</a>
+				target="_blank" rel="noopener noreferrer" style="text-decoration:none; color:white">Platerforme Super Documentée</a>
 			</figcaption>
 		</figure>
 		</a>

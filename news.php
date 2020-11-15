@@ -7,8 +7,7 @@ $title = "News";
 require_once('include/require.php');
 
 $id_categorie = 1;
-$sous_categories_list = Bdd::getInstance()->conn->query('SELECT * FROM `sous_categorie` 
-	WHERE id_categorie = "' . $id_categorie . '"');
+$sous_categories_list = Element::getSpecificSousCategorie($id_categorie);
 
     
 // on inclut la vue (partie visible => front) de la page

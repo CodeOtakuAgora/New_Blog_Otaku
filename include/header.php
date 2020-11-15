@@ -42,13 +42,6 @@
                     <a class="nav-link" href="gallerie.php">Gallerie</a>
                 <?php } ?>
             </li>
-            <li class="nav-item <?php if($title == 'Quiz') { ?> active <?php } ?>">
-                <?php if (isset($titleAdminCrud)) { ?>
-                    <a class="nav-link" href="../quiz.php">Quiz</a>
-                <?php } else { ?>
-                    <a class="nav-link" href="quiz.php">Quiz</a>
-                <?php } ?>
-            </li>
 
             <?php if(!isset($_SESSION['login'])) { ?>
                 <li class="nav-item <?php if($title == 'Connexion') { ?> active <?php } ?>">
