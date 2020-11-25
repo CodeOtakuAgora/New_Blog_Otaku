@@ -3,7 +3,7 @@
 <?php require_once('require.php');
 ?>
 
-<body <?php if (isset($title) && $title == "Accueil") { ?> class="maHome" <?php } ?> >
+<body <?php if (isset($title) && $title == "Code Otaku") { ?> class="maHome" <?php } ?> >
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#!" title="Otaku Blog">
@@ -21,7 +21,7 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">            
-            <li class="nav-item <?php if($title == 'Accueil') { ?> active <?php } ?>">
+            <li class="nav-item <?php if($title == 'Code Otaku') { ?> active <?php } ?>">
                 <?php if (isset($titleAdminCrud)) { ?>
                     <a class="nav-link" href="../index.php">Accueil</a>
                 <?php } else { ?>

@@ -19,8 +19,9 @@
 
 	<div class="block-float">
 		<div class="ecart-content">
+			<h1>Code Otaku</h1>
 			<p>
-				!!! Attention site otaku !!!<br/><br/>
+				! Attention site otaku !<br/><br/>
 
 				Donc, dans <strong>l'ACCUEIL</strong> il y a : une petite présentation du site avec des infos sur moi ainsi que des infos sur le Japon pour les intéressés avec un compteur de visites.<br/><br/>
 
